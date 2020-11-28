@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Integer Addition</title>
+</head>
+<body>
+
+	<h2>This program returns sum of integers</h2>
+	<form>
+	<table>
+		<tr>
+			<td>Number1<td>
+			<td><input type="number" id="number1" required></td>
+		</tr>
+		<tr>
+			<td>Number2<td>
+			<td><input type="number" id="number2" required></td>
+		</tr>
+		
+	</table>
+	<input type="submit" value="Submit" onclick="sum()">
+</form> 
+
+
+<script>
+	function sum()  {
+	var num1 = document.getElementById("number1").value ;
+	var num2 = document.getElementById("number2").value;
+	if(isNaN(num1) || num1=="" || isNaN(num2) || num2==""){
+		alert("Invalid Input");
+	}
+	else if(num1 == num2)
+	{
+		alert("Woah!! Two numbers are equal. Returning triple thier sum: " + 3*(Number(num1) + Number(num2)));
+	}
+	else
+	{
+		alert("Sum of entered numbers: " + (Number(num1) + Number(num2)));
+	}
+	}
+</script>
+
+</body>
+</html>
+

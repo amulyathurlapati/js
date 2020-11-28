@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Extract string</title>
+</head>
+<body>
+
+<h2>This program extracts the specified length of characters from the string</h2>
+<form>
+	<table>
+		<tr>
+			<td>Input String<td>
+			<td><input type="text" id="string_entered" required></td>
+		</tr>
+		<tr>
+			<td>Start Index<td>
+			<td><input type="number" id="start_index" required></td>
+		</tr>
+		<tr>
+			<td>Length of string to extract<td>
+			<td><input type="number" id="length" required></td>
+		</tr>
+		
+	</table>
+	<input type="submit" value="Submit" onclick="slice()">
+</form> 
+
+
+<script>
+	function slice()  {
+	var str = document.getElementById("string_entered").value;
+	var start = document.getElementById("start_index").value;
+	var len = document.getElementById("length").value, str_endindex=str.length-1;
+	if(str=="" || start=="" || len==""){
+		alert("No input received in one or more fields. Please enter valid input");
+	}
+	else if(start>str_endindex){
+		alert("Invalid Start Index. Enter a input between -" + str.length + " and " + str_endindex);
+	}
+	else if(len<=0){
+		alert("Invalid length. Enter a positive number");
+	}
+	else{
+		alert("Extracted string: " + str.substr(start,len));
+	}
+	}
+</script>
+
+</body>
+</html>
+

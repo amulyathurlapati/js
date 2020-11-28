@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Integer Addition</title>
+</head>
+<body>
+
+	<h2>This program returns a number formatted to specified decimal places</h2>
+	<form>
+	<table>
+		<tr>
+			<td>Number<td>
+			<td><input type="text" id="number1" required></td>
+		</tr>
+		<tr>
+			<td>No of decimal places<td>
+			<td><input type="number" id="number2" required></td>
+		</tr>
+		
+	</table>
+	<input type="submit" value="Submit" onclick="format()">
+	</form> 
+
+
+<script>
+	function format()  {
+	var num = document.getElementById("number1").value ;
+	var num_of_decimals = document.getElementById("number2").value;
+	if(isNaN(num) || num=="" || isNaN(num_of_decimals) || num_of_decimals==""){
+		alert("Invalid Input");
+	}
+	else{
+		alert("Number " + num + " fixed to " + num_of_decimals + " decimal places is: " + Number(num.toFixed(num_of_decimals)));
+	}
+	}
+</script>
+
+</body>
+</html>
+

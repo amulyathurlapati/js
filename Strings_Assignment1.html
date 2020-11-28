@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Word splitter</title>
+</head>
+<body>
+
+<h2>This page splits the entered input to array of characters</h2>
+<form>
+	<p>Enter a string: <input type="text" id="string_entered" required></p>
+	<input type="submit" value="Submit" onClick = "split()">
+</form> 
+
+
+<script>
+	function split()  {
+	var str = document.getElementById("string_entered").value ;
+	if(str==""){
+		alert("No input received. Please input a valid string");
+	}
+	else{
+		alert("Array of characters of the entered string: " + str.split(""));
+	}
+	}
+</script>
+
+</body>
+</html>
+
